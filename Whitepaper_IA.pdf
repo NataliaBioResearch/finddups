@@ -1,0 +1,434 @@
+MANUAL DE SEGURETAT AVANÇADA — FINDDUPS
+Versió 1.0.0 — Plecmedia Technologies  
+Data: 22/07/2026
+
+1. Portada
+FindDups — Manual de Seguretat Avançada  
+Hardening, Controls, Integritat, Auditoria i Operacions Segures
+Plecmedia Technologies
+Versió 1.0.0
+Autor: Gaia / Natàlia Ràfols
+
+2. Índex
+Objectiu del Document
+
+Model de Seguretat Avançada
+
+Arquitectura Segura
+
+Hardening del Producte
+
+Hardening de Windows
+
+Controls Criptogràfics
+
+Protecció de Models IA
+
+Integritat del Runtime
+
+Seguretat en Execució
+
+Seguretat en Desplegament
+
+Seguretat en Actualitzacions
+
+Seguretat en Logs
+
+Seguretat en BD SQLite
+
+Integració SIEM / SOC
+
+Amenaces Avançades
+
+Mitigacions Avançades
+
+Procediments d’Incidències Crítiques
+
+Annexos Avançats
+
+3. Objectiu del Document
+Aquest manual defineix els controls de seguretat avançada aplicables al producte FindDups en entorns corporatius d’alt risc:
+
+administracions públiques
+
+infraestructures crítiques
+
+entorns regulats (ENS, ISO 27001)
+
+empreses amb SOC 24/7
+
+entorns Zero Trust
+
+4. Model de Seguretat Avançada
+FindDups adopta un model basat en:
+
+Zero Trust
+
+Defense in Depth
+
+Seguretat per Capes
+
+Integritat Criptogràfica
+
+Execució Local Aïllada
+
+Hardening del Runtime
+
+Auditoria Completa
+
+5. Arquitectura Segura
+5.1 Components protegits
+FindDups.exe
+
+updater.exe
+
+RegisterContextMenu.exe
+
+UnregisterContextMenu.exe
+
+models IA (vision_model.bin, text_embeddings.bin, name_similarity.bin)
+
+BD SQLite
+
+logs corporatius
+
+configuració enterprise
+
+5.2 Zones de confiança
+Zona 0: models IA
+
+Zona 1: runtime corporatiu
+
+Zona 2: context menu
+
+Zona 3: integració AD / GPO
+
+Zona 4: SIEM / SOC
+
+6. Hardening del Producte
+6.1 Fitxers executables
+permisos NTFS restrictius
+
+només lectura per usuaris
+
+execució només per administradors
+
+bloqueig de modificació
+
+6.2 Configuració
+Fitxers protegits:
+
+Código
+C:\Program Files\FindDups\config\settings.json
+C:\Program Files\FindDups\config\enterprise.json
+Controls:
+
+només lectura
+
+ACLs restrictives
+
+validació de integritat
+
+6.3 Models IA
+no editables
+
+no executables
+
+només lectura
+
+hashos verificats
+
+7. Hardening de Windows
+7.1 GPO recomanades
+bloqueig d’execució en carpetes no autoritzades
+
+restricció de PowerShell
+
+restricció de scripts BAT
+
+protecció de claus del registre
+
+7.2 NTFS
+permisos restrictius
+
+propietari: Administrador
+
+lectura per usuaris
+
+escriptura només per IT
+
+7.3 Firewall
+FindDups no utilitza xarxa, però es recomana:
+
+bloqueig total d’entrada
+
+bloqueig total de sortida
+
+8. Controls Criptogràfics
+8.1 Hash SHA256
+Utilitzat per:
+
+detecció de duplicats exactes
+
+integritat de fitxers corporatius
+
+validació de models IA
+
+8.2 Checksums corporatius
+Fitxers amb hash:
+
+executables
+
+models IA
+
+MSI
+
+instal·lador EXE
+
+8.3 Integritat del runtime
+Procediment:
+
+calcular hash
+
+comparar amb version.txt
+
+validar integritat
+
+bloquejar execució si hi ha discrepàncies
+
+9. Protecció de Models IA
+9.1 Execució local
+sense connexió a Internet
+
+sense telemetria
+
+sense enviament de dades
+
+9.2 Integritat
+hashos verificats
+
+models en format binari
+
+no editables
+
+9.3 Aïllament
+càrrega en memòria segura
+
+embeddings temporals
+
+no persistència
+
+10. Integritat del Runtime
+10.1 Fitxers crítics
+FindDups.exe
+
+updater.exe
+
+context menu
+
+BD SQLite
+
+10.2 Validació
+hashos
+
+signatures digitals
+
+version.txt
+
+10.3 Protecció
+ACLs restrictives
+
+bloqueig de modificació
+
+execució controlada
+
+11. Seguretat en Execució
+11.1 Execució controlada
+només usuaris autoritzats
+
+execució en entorns segurs
+
+restricció d’accés a models IA
+
+11.2 Protecció contra manipulació
+validació de rutes
+
+protecció contra path traversal
+
+protecció contra fitxers maliciosos
+
+12. Seguretat en Desplegament
+12.1 MSI
+signatura digital
+
+integritat validada
+
+instal·lació segura
+
+12.2 Scripts corporatius
+SCCM
+
+Intune
+
+PDQ Deploy
+
+12.3 Restriccions
+execució només en entorns autoritzats
+
+validació de permisos
+
+13. Seguretat en Actualitzacions
+13.1 Updater.exe
+Controls:
+
+comparació de versions
+
+validació de hash
+
+còpia segura
+
+registre en log
+
+13.2 Integritat del paquet
+version.txt
+
+checksums corporatius
+
+14. Seguretat en Logs
+14.1 Logs corporatius
+Código
+C:\Program Files\FindDups\logs\finddups.log
+14.2 Logs portable
+Código
+portable/logs/portable.log
+14.3 Protecció
+lectura restringida
+
+escriptura controlada
+
+integració SIEM
+
+15. Seguretat en BD SQLite
+15.1 Protecció
+ACLs restrictives
+
+lectura per usuaris
+
+escriptura per IT
+
+15.2 Integritat
+hashos
+
+còpies de seguretat
+
+validació periòdica
+
+15.3 Auditoria
+registre complet
+
+traçabilitat total
+
+16. Integració SIEM / SOC
+16.1 Logs enviables
+escaneigs
+
+duplicats
+
+errors
+
+eliminacions
+
+16.2 Plataformes recomanades
+Splunk
+
+Elastic
+
+Azure Sentinel
+
+QRadar
+
+16.3 Alertes recomanades
+modificació de models IA
+
+modificació de configuració
+
+execució no autoritzada
+
+corrupció de BD
+
+17. Amenaces Avançades
+17.1 Amenaces
+manipulació de models IA
+
+corrupció de BD
+
+modificació de configuració
+
+execució no autoritzada
+
+malware en fitxers analitzats
+
+17.2 Impacte
+pèrdua de integritat
+
+detecció incorrecta
+
+fallada de seguretat
+
+compromís del sistema
+
+18. Mitigacions Avançades
+hashos criptogràfics
+
+ACLs restrictives
+
+hardening Windows
+
+validació de rutes
+
+integració SIEM
+
+signatures digitals
+
+execució controlada
+
+19. Procediments d’Incidències Crítiques
+19.1 Detecció
+alertes SIEM
+
+anomalies en logs
+
+errors en BD
+
+19.2 Contenció
+bloqueig d’accés
+
+validació de integritat
+
+revisió de models IA
+
+19.3 Recuperació
+regeneració de BD
+
+reinstal·lació corporativa
+
+validació de hash
+
+20. Annexos Avançats
+Annex A — Checksums SHA256
+Hashos de fitxers corporatius.
+
+Annex B — Hardening Windows
+GPO
+
+permisos NTFS
+
+restriccions d’execució
+
+Annex C — Claus del registre
+context menu
+
+integració Windows
+
+Annex D — Esquema de BD
+Taules scans i duplicates.

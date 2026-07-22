@@ -1,0 +1,266 @@
+DOCUMENTACIÓ COMERCIAL — FINDDUPS
+Versió 1.0.0 — Plecmedia Technologies  
+Data: 22/07/2026
+
+1. Portada Comercial
+FindDups — Solució Corporativa de Detecció de Fitxers Duplicats  
+Documentació Comercial
+Plecmedia Technologies
+Versió 1.0.0
+Autor: Gaia / Natàlia Ràfols
+
+2. Índex Comercial
+Resum Executiu
+
+Problema i Necessitat
+
+Solució FindDups
+
+Beneficis Clau
+
+Característiques Principals
+
+Arquitectura del Producte
+
+Versions Disponibles
+
+Integració Corporativa
+
+Seguretat i Compliment
+
+Casos d’Ús
+
+Model de Llicenciament
+
+Suport i Manteniment
+
+Contacte Comercial
+
+3. Resum Executiu
+FindDups és una solució corporativa dissenyada per detectar, gestionar i eliminar fitxers duplicats en entorns professionals.
+Permet reduir costos d’emmagatzematge, millorar l’eficiència operativa i garantir la integritat documental.
+
+És una eina lleugera, ràpida, segura i compatible amb qualsevol infraestructura Windows.
+
+4. Problema i Necessitat
+Les organitzacions acumulen milers de fitxers duplicats:
+
+còpies repetides de documents
+
+imatges duplicades
+
+arxius generats per processos automàtics
+
+duplicats en servidors compartits
+
+duplicats en NAS, SAN i discs externs
+
+Això genera:
+
+sobrecost en emmagatzematge
+
+confusió documental
+
+risc de versions incorrectes
+
+pèrdua de temps en gestió
+
+saturació de servidors
+
+FindDups resol aquest problema de manera automatitzada.
+
+5. Solució FindDups
+FindDups ofereix:
+
+detecció ràpida de duplicats
+
+eliminació segura
+
+informes corporatius
+
+historial d’escaneigs
+
+integració amb IA
+
+desplegament massiu
+
+compatibilitat amb Windows 10/11
+
+És una solució modular que s’adapta tant a PIMEs com a grans corporacions.
+
+6. Beneficis Clau
+Reducció de costos d’emmagatzematge
+
+Optimització de servidors i NAS
+
+Millora de la governança documental
+
+Eliminació segura de duplicats
+
+Historial corporatiu per auditoria
+
+Integració amb IA per similitud visual i textual
+
+Desplegament massiu amb SCCM, Intune i PDQ
+
+Actualitzacions automàtiques (Enterprise)
+
+Zero configuració (Portable)
+
+7. Característiques Principals
+Detecció de duplicats
+Hash SHA256
+
+Comparació visual (IA)
+
+Comparació textual (IA)
+
+Detecció de noms similars
+
+Gestió
+Eliminació segura
+
+Informes corporatius
+
+Historial complet
+
+Integració
+Menú contextual Windows
+
+MSI corporatiu
+
+Scripts de desplegament
+
+IA opcional
+Embeddings visuals
+
+Embeddings textuals
+
+Model semàntic
+
+8. Arquitectura del Producte
+✔ Versió Enterprise
+Pensada per entorns corporatius:
+
+instal·lador MSI
+
+context menu
+
+updater automàtic
+
+BD SQLite
+
+models IA corporatius
+
+configuració centralitzada
+
+✔ Versió Portable
+Pensada per ús autònom:
+
+sense instal·lació
+
+rutes relatives
+
+models IA locals
+
+logs locals
+
+9. Versions Disponibles
+Enterprise
+Instal·lació corporativa
+
+Integració amb Windows
+
+Actualitzacions automàtiques
+
+Historial centralitzat
+
+Ideal per servidors i equips d’empresa
+
+Portable
+Executable autònom
+
+Sense permisos d’administrador
+
+Ideal per USB, NAS, discs externs
+
+Sense context menu ni updater
+
+10. Integració Corporativa
+FindDups és compatible amb:
+
+SCCM
+
+Intune
+
+PDQ Deploy
+
+Active Directory
+
+Entorns Windows Server
+
+NAS corporatius
+
+Inclou scripts de desplegament i configuració.
+
+11. Seguretat i Compliment
+Hashos criptogràfics
+
+Eliminació segura
+
+Validació de rutes
+
+Integritat del MSI
+
+Checksums SHA256
+
+Compliment amb polítiques IT corporatives
+
+12. Casos d’Ús
+Neteja de servidors de fitxers
+
+Optimització de NAS / SAN
+
+Preparació d’auditories
+
+Reducció de costos d’emmagatzematge
+
+Governança documental
+
+Neteja de repositoris multimèdia
+
+Organització de biblioteques digitals
+
+13. Model de Llicenciament
+✔ Llicència Enterprise
+Per dispositiu o per servidor
+
+Suport inclòs
+
+Actualitzacions automàtiques
+
+Opció de llicència anual o perpètua
+
+✔ Llicència Portable
+Pagament únic
+
+Sense instal·lació
+
+Sense actualitzacions automàtiques
+
+14. Suport i Manteniment
+Suport tècnic corporatiu
+
+Actualitzacions de seguretat
+
+Regeneració de models IA
+
+Assistència en desplegament
+
+Documentació tècnica completa
+
+15. Contacte Comercial
+Plecmedia Technologies  
+Departament Comercial
+Email: natalia@plecmedia.com
+Ubicació: Tossa de Mar / Salou, Catalunya

@@ -1,0 +1,80 @@
+FindDups Portable – Versió Autònoma
+===================================
+
+Descripció
+----------
+FindDups Portable és la versió autònoma del sistema de detecció de fitxers duplicats.
+No requereix instal·lació, no modifica el registre de Windows i pot executar-se des de
+qualsevol ubicació: USB, disc extern, NAS, carpeta local o xarxa.
+
+Estructura de carpetes
+----------------------
+portable/
+ ├── FindDups.exe
+ ├── config/
+ │    └── settings.json
+ ├── logs/
+ │    └── portable.log
+ ├── ia_models/
+ │    ├── vision_model.bin
+ │    ├── text_embeddings.bin
+ │    └── name_similarity.bin
+ ├── cache/
+ └── README_Portable.txt
+
+Requisits
+---------
+- Windows 10 o superior
+- .NET Framework 4.7.2 o superior
+- Permís de lectura a les carpetes que es vulguin escanejar
+
+Funcionament
+------------
+1. Executa FindDups.exe
+2. Selecciona la carpeta que vols analitzar
+3. Prem "Escanejar"
+4. Els duplicats es mostraran a la llista
+5. Pots eliminar duplicats amb el botó "Eliminar duplicats"
+
+Configuració
+------------
+La configuració es troba a:
+portable/config/settings.json
+
+Inclou:
+- Rutes relatives
+- Paràmetres d’escaneig
+- Configuració de models IA
+- Configuració de logs
+
+Historial
+---------
+La versió portable guarda l’historial a:
+portable/finddups_history.db
+
+Aquest fitxer es genera automàticament si no existeix.
+
+Models IA
+---------
+Els models IA es troben a:
+portable/ia_models/
+
+No s’han d’editar ni obrir. Són fitxers binaris generats per processos d’entrenament.
+
+Limitacions de la versió portable
+---------------------------------
+- No té actualitzador automàtic
+- No té integració amb el menú contextual de Windows
+- No s’instal·la a Program Files
+- No té integració amb MSI ni EXE corporatiu
+
+Avantatges
+----------
+- 100% autònoma
+- No requereix permisos d’administrador
+- Ideal per ús en USB o entorns sense instal·lació
+- Compatible amb xarxes i NAS
+
+Suport
+------
+Per incidències, contacta amb Plecmedia Technologies.

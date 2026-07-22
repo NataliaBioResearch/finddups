@@ -1,0 +1,318 @@
+GUIA IT — FINDDUPS
+Versió 1.0.0 — Plecmedia Technologies  
+Data: 22/07/2026
+
+1. Portada
+FindDups — Guia IT per Administradors de Sistemes  
+Desplegament, Configuració, Integració i Manteniment
+Plecmedia Technologies
+Versió 1.0.0
+Autor: Gaia / Natàlia Ràfols
+
+2. Índex
+Objectiu de la Guia
+
+Requisits del Sistema
+
+Arquitectura del Producte
+
+Fitxers i Carpetes Crítiques
+
+Instal·lació (Enterprise)
+
+Desplegament Massiu
+
+Configuració Corporativa
+
+Integració amb Windows
+
+Models IA
+
+Logs i Monitoratge
+
+Manteniment i Actualitzacions
+
+Troubleshooting IT
+
+Bones Pràctiques
+
+Annexos Operatius
+
+3. Objectiu de la Guia
+Aquesta guia proporciona instruccions tècniques per:
+
+desplegar FindDups en entorns corporatius
+
+integrar-lo amb Windows i sistemes de gestió
+
+configurar-lo segons polítiques IT
+
+mantenir-lo i monitorar-lo
+
+resoldre incidències
+
+És un document operatiu per a equips IT.
+
+4. Requisits del Sistema
+4.1 Requisits mínims
+Windows 10/11
+
+.NET Framework 4.7.2 o superior
+
+200 MB d’espai lliure
+
+Permisos d’administrador (Enterprise)
+
+4.2 Requisits recomanats
+Windows Server 2019/2022
+
+NAS corporatiu o SAN
+
+Integració amb AD
+
+SCCM / Intune / PDQ Deploy
+
+5. Arquitectura del Producte
+FindDups es divideix en dos productes:
+
+Enterprise
+Instal·lador MSI
+
+Context menu
+
+Updater automàtic
+
+BD SQLite
+
+Models IA corporatius
+
+Configuració centralitzada
+
+Portable
+Executable autònom
+
+Rutes relatives
+
+Models IA locals
+
+Logs locals
+
+6. Fitxers i Carpetes Crítiques
+Enterprise
+Código
+C:\Program Files\FindDups\
+ ├── FindDups.exe
+ ├── updater.exe
+ ├── logs\
+ ├── config\
+ ├── ia_models\
+ └── finddups_history.db
+Portable
+Código
+portable/
+ ├── FindDups.exe
+ ├── config/settings.json
+ ├── logs/portable.log
+ ├── ia_models/
+ └── cache/
+7. Instal·lació (Enterprise)
+7.1 Instal·lador EXE
+Valida rutes
+
+Executa MSI
+
+Registra context menu
+
+Crea carpetes runtime
+
+7.2 Instal·lador MSI
+Copia fitxers
+
+Registra claus del registre
+
+Crea logs
+
+Crea configuració corporativa
+
+7.3 Instal·lació silenciosa
+Código
+FindDupsInstaller.exe /silent
+8. Desplegament Massiu
+8.1 SCCM
+Paquet Win32
+
+Execució silenciosa
+
+Validació de versió
+
+8.2 Intune
+Win32 App Packaging
+
+Assignació a grups AD
+
+8.3 PDQ Deploy
+Script PowerShell
+
+Logs corporatius
+
+8.4 Scripts inclosos
+install_silent.bat
+
+uninstall_silent.bat
+
+deploy_sccm.ps1
+
+deploy_intune.ps1
+
+deploy_pdq.ps1
+
+9. Configuració Corporativa
+9.1 settings.json
+Conté:
+
+rutes corporatives
+
+BD
+
+logs
+
+models IA
+
+updater
+
+context menu
+
+9.2 enterprise.json
+Polítiques corporatives:
+
+permisos
+
+integració AD
+
+comportament del context menu
+
+configuració de seguretat
+
+9.3 defaults.json
+Valors per defecte del sistema.
+
+10. Integració amb Windows
+10.1 Context Menu
+Registra:
+
+Código
+HKEY_CLASSES_ROOT\*\shell\FindDups
+10.2 Execució des del clic dret
+Código
+"C:\Program Files\FindDups\FindDups.exe" "%1"
+10.3 Integració amb AD
+desplegament per GPO
+
+assignació per OU
+
+restriccions per grup
+
+11. Models IA
+11.1 vision_model.bin
+embeddings visuals
+
+detecció d’imatges similars
+
+11.2 text_embeddings.bin
+embeddings textuals
+
+comparació de noms
+
+11.3 name_similarity.bin
+similitud semàntica
+
+Cap .bin s’edita manualment.
+
+12. Logs i Monitoratge
+Enterprise
+Código
+C:\Program Files\FindDups\logs\finddups.log
+Portable
+Código
+portable/logs/portable.log
+Monitoratge recomanat
+SIEM
+
+Splunk
+
+Elastic
+
+Azure Log Analytics
+
+13. Manteniment i Actualitzacions
+13.1 Updater.exe
+compara versions
+
+actualitza runtime
+
+registra logs
+
+13.2 Regeneració de models IA
+substitució de .bin
+
+validació de hash
+
+13.3 Neteja d’historial
+Código
+reset_history.exe
+14. Troubleshooting IT
+Problemes comuns
+context menu no funciona
+
+models IA no trobats
+
+BD corrupta
+
+permisos insuficients
+
+logs buits
+
+Solucions
+revisar settings.json
+
+reinstal·lar context menu
+
+regenerar BD
+
+revisar permisos NTFS
+
+executar com administrador
+
+15. Bones Pràctiques
+desplegar Enterprise en servidors
+
+utilitzar Portable en USB/NAS
+
+monitorar logs corporatius
+
+validar integritat amb checksums
+
+actualitzar models IA anualment
+
+utilitzar scripts oficials
+
+16. Annexos Operatius
+Annex A — Scripts de desplegament
+SCCM
+
+Intune
+
+PDQ
+
+BAT / PS1
+
+Annex B — Claus del registre
+context menu
+
+integració Windows
+
+Annex C — Checksums
+hash de fitxers corporatius
+
+Annex D — Esquema de BD
+taules scans i duplicates

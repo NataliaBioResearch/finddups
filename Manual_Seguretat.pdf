@@ -1,0 +1,361 @@
+MANUAL DE GOVERNANÇA DE DADES — FINDDUPS
+Versió 1.0.0 — Plecmedia Technologies  
+Data: 22/07/2026
+
+1. Portada
+FindDups — Manual de Governança de Dades  
+Polítiques, Classificació, Controls, Traçabilitat i Compliment
+Plecmedia Technologies
+Versió 1.0.0
+Autor: Gaia / Natàlia Ràfols
+
+2. Índex
+Objectiu del Document
+
+Principis de Governança
+
+Model de Governança de Dades
+
+Classificació de Dades
+
+Polítiques de Retenció
+
+Controls d’Accés
+
+Integritat i Traçabilitat
+
+Processament de Dades
+
+Models IA i Governança
+
+Compliment Normatiu
+
+Gestió d’Incidències
+
+Responsabilitats Corporatives
+
+Bones Pràctiques
+
+Annexos de Governança
+
+3. Objectiu del Document
+Aquest manual defineix el marc de governança de dades aplicable al producte FindDups.
+Està orientat a:
+
+responsables de dades
+
+equips de governança
+
+auditors
+
+departaments de seguretat
+
+responsables IT
+
+compliance corporatiu
+
+4. Principis de Governança
+FindDups aplica:
+
+Integritat — les dades no es modifiquen
+
+Traçabilitat — totes les execucions queden registrades
+
+Minimització — només es processen dades necessàries
+
+Aïllament — tot el processament és local
+
+Compliment — alineat amb ISO 9001, ISO 27001, ENS i GDPR
+
+Transparència — logs i historial accessibles per auditoria
+
+Seguretat — protecció contra manipulació i accés indegut
+
+5. Model de Governança de Dades
+5.1 Dades Operatives
+Inclou:
+
+fitxers analitzats
+
+hashos SHA256
+
+resultats IA
+
+informes corporatius
+
+5.2 Dades de Governança
+Inclou:
+
+historial d’escaneigs
+
+logs corporatius
+
+configuració enterprise
+
+5.3 Dades de Control
+Inclou:
+
+versió instal·lada
+
+hash de fitxers corporatius
+
+models IA
+
+6. Classificació de Dades
+6.1 Dades processades
+FindDups processa:
+
+noms de fitxers
+
+metadades (mida, extensió, data)
+
+hashos criptogràfics
+
+embeddings IA (temporals)
+
+6.2 Dades no processades
+FindDups no processa:
+
+dades personals sensibles
+
+contingut intern dels fitxers
+
+informació confidencial no relacionada amb duplicats
+
+6.3 Dades no enviades
+FindDups no transmet dades a tercers.
+Tot el processament és local.
+
+7. Polítiques de Retenció
+7.1 Historial d’Escaneigs
+Retenció recomanada: 12 mesos  
+Motiu: auditoria, QA, traçabilitat.
+
+7.2 Logs corporatius
+Retenció recomanada: 90 dies  
+Motiu: diagnòstic i seguretat.
+
+7.3 Informes IA
+Retenció segons política corporativa del client.
+
+7.4 Models IA
+Retenció indefinida fins a nova versió.
+
+8. Controls d’Accés
+8.1 Execució del programari
+accés per usuaris autoritzats
+
+no requereix permisos elevats (Portable)
+
+Enterprise requereix permisos d’administrador
+
+8.2 Historial IA
+accés restringit a administradors IT
+
+BD SQLite protegida per ACLs
+
+8.3 Logs corporatius
+accés restringit
+
+exportació opcional a SIEM corporatiu
+
+8.4 Configuració enterprise
+fitxer enterprise.json protegit per permisos NTFS
+
+9. Integritat i Traçabilitat
+9.1 Integritat del programari
+Tots els binaris estan signats digitalment:
+
+FindDups.exe
+
+instal·lador EXE
+
+MSI
+
+context menu
+
+updater
+
+9.2 Traçabilitat IA
+Cada execució IA queda registrada a:
+
+Código
+finddups_history.db
+Inclou:
+
+carpeta analitzada
+
+mode IA
+
+sensibilitat
+
+motors activats
+
+resultats per categoria
+
+data i hora
+
+9.3 Registre d’activitat
+Ubicació:
+
+Código
+C:\Program Files\FindDups\logs\
+10. Processament de Dades
+10.1 Hashos
+SHA256
+
+detecció de duplicats exactes
+
+integritat criptogràfica
+
+10.2 IA
+embeddings visuals
+
+embeddings textuals
+
+similitud semàntica
+
+processament temporal
+
+10.3 BD SQLite
+Taules:
+
+scans
+
+duplicates
+
+11. Models IA i Governança
+11.1 Execució local
+Els models IA:
+
+s’executen localment
+
+no envien dades
+
+no emmagatzemen informació
+
+11.2 Fitxers .bin
+models en format binari
+
+no editables
+
+no executables
+
+carregats en memòria segura
+
+11.3 Transparència
+arquitectura documentada
+
+comportament auditable
+
+12. Compliment Normatiu
+FindDups compleix:
+
+ISO 9001 — qualitat
+
+ISO 27001 — seguretat
+
+ENS — seguretat pública
+
+GDPR — protecció de dades
+
+Polítiques corporatives
+
+Controls aplicats:
+
+integritat
+
+traçabilitat
+
+auditabilitat
+
+seguretat
+
+documentació
+
+13. Gestió d’Incidències
+13.1 Tipus d’incidències
+tècniques
+
+de seguretat
+
+de dades
+
+de rendiment
+
+de configuració
+
+13.2 Procediment
+Detecció
+
+Registre
+
+Anàlisi
+
+Contenció
+
+Resolució
+
+Validació
+
+Documentació
+
+14. Responsabilitats Corporatives
+14.1 Plecmedia Technologies
+desenvolupament
+
+manteniment
+
+actualitzacions
+
+documentació
+
+14.2 Client corporatiu
+desplegament
+
+configuració
+
+governança interna
+
+auditoria
+
+14.3 Administradors IT
+integració
+
+permisos
+
+seguretat
+
+monitoratge
+
+15. Bones Pràctiques
+utilitzar Enterprise en servidors
+
+utilitzar Portable en USB/NAS
+
+monitorar logs corporatius
+
+validar integritat amb checksums
+
+revisar models IA anualment
+
+revisar configuració trimestralment
+
+integrar en SIEM corporatiu
+
+16. Annexos de Governança
+Annex A — Esquema de BD
+Taules scans i duplicates.
+
+Annex B — Checksums
+Hashos de fitxers corporatius.
+
+Annex C — Polítiques corporatives
+AD
+
+GPO
+
+NTFS
+
+Annex D — Registre d’activitats
+Format de logs corporatius.

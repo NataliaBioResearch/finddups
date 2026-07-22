@@ -1,0 +1,355 @@
+MANUAL DE SEGURETAT — FINDDUPS
+Versió 1.0.0 — Plecmedia Technologies  
+Data: 22/07/2026
+
+1. Portada
+FindDups — Manual de Seguretat Corporativa  
+Polítiques, Controls, Hardening i Compliment Normatiu
+Plecmedia Technologies
+Versió 1.0.0
+Autor: Gaia / Natàlia Ràfols
+
+2. Índex
+Objectiu del Document
+
+Model de Seguretat
+
+Controls de Protecció
+
+Hashos i Integritat
+
+Gestió de Fitxers
+
+Models IA i Seguretat
+
+Configuració Segura
+
+Hardening del Sistema
+
+Logs i Monitoratge
+
+Compliment Normatiu
+
+Seguretat en Desplegament
+
+Seguretat en Actualitzacions
+
+Amenaces i Mitigacions
+
+Procediments d’Incidències
+
+Annexos de Seguretat
+
+3. Objectiu del Document
+Aquest manual defineix les polítiques, controls i procediments de seguretat aplicables al producte FindDups.
+Està orientat a:
+
+Administradors IT
+
+Equips SOC
+
+Auditors
+
+Responsables de seguretat
+
+Equips de compliment normatiu
+
+4. Model de Seguretat
+FindDups adopta un model de seguretat basat en:
+
+Zero Trust
+
+Principi de mínim privilegi
+
+Integritat criptogràfica
+
+Execució local sense dependències externes
+
+Protecció de dades corporatives
+
+Auditoria completa
+
+5. Controls de Protecció
+5.1 Controls de fitxers
+No modifica fitxers originals
+
+Eliminació segura
+
+Validació de rutes
+
+Protecció contra path traversal
+
+5.2 Controls de memòria
+Models IA carregats en memòria segura
+
+No s’envien dades a tercers
+
+No hi ha telemetria externa
+
+5.3 Controls de xarxa
+FindDups no utilitza connexions de xarxa.
+Tot el processament és local.
+
+6. Hashos i Integritat
+6.1 Hash SHA256
+Tots els fitxers analitzats es processen amb:
+
+SHA256
+(
+𝑓
+𝑖
+𝑡
+𝑥
+𝑒
+𝑟
+)
+Això garanteix:
+
+detecció de duplicats exactes
+
+integritat criptogràfica
+
+resistència a col·lisions
+
+6.2 Checksums corporatius
+Els fitxers del producte tenen hash SHA256 per:
+
+validar integritat
+
+detectar manipulacions
+
+complir auditories
+
+7. Gestió de Fitxers
+7.1 Eliminació segura
+FindDups elimina duplicats mitjançant:
+
+esborrat controlat
+
+registre en log
+
+registre en BD
+
+validació de permisos
+
+7.2 Protecció contra pèrdua de dades
+mai elimina l’original
+
+només elimina duplicats confirmats
+
+validació de hash abans d’eliminar
+
+8. Models IA i Seguretat
+8.1 Execució local
+Els models IA:
+
+s’executen localment
+
+no envien dades a tercers
+
+no requereixen Internet
+
+8.2 Fitxers .bin
+models en format binari
+
+no editables
+
+no executables
+
+carregats en memòria segura
+
+8.3 Privacitat
+Els models IA no emmagatzemen dades.
+Només generen embeddings temporals.
+
+9. Configuració Segura
+9.1 settings.json
+Controls:
+
+rutes validades
+
+logs controlats
+
+models IA definits
+
+BD protegida
+
+sense execució remota
+
+9.2 enterprise.json
+Polítiques corporatives:
+
+permisos
+
+integració AD
+
+comportament del context menu
+
+restriccions de seguretat
+
+10. Hardening del Sistema
+10.1 Hardening Windows
+Recomanat:
+
+NTFS amb permisos restrictius
+
+bloqueig d’escriptura en models IA
+
+execució només per administradors
+
+integració amb GPO
+
+10.2 Hardening del producte
+bloqueig de modificació de settings.json
+
+protecció de logs
+
+protecció de BD SQLite
+
+validació de signatures
+
+11. Logs i Monitoratge
+11.1 Logs corporatius
+Código
+C:\Program Files\FindDups\logs\finddups.log
+11.2 Logs portable
+Código
+portable/logs/portable.log
+11.3 Integració SIEM
+Recomanat:
+
+Splunk
+
+Elastic
+
+Azure Log Analytics
+
+Sentinel
+
+12. Compliment Normatiu
+FindDups facilita el compliment de:
+
+ISO 27001
+
+ENS (Esquema Nacional de Seguretat)
+
+GDPR
+
+Polítiques internes corporatives
+
+Controls aplicats:
+
+integritat
+
+auditabilitat
+
+protecció de dades
+
+registre d’activitats
+
+13. Seguretat en Desplegament
+13.1 MSI
+signatura digital
+
+validació de hash
+
+instal·lació segura
+
+13.2 Scripts corporatius
+SCCM
+
+Intune
+
+PDQ Deploy
+
+BAT / PS1
+
+13.3 Restriccions
+execució només en entorns autoritzats
+
+validació de permisos
+
+14. Seguretat en Actualitzacions
+14.1 Updater.exe
+Controls:
+
+comparació de versions
+
+validació de hash
+
+còpia segura
+
+registre en log
+
+14.2 Integritat del paquet
+version.txt
+
+checksums corporatius
+
+15. Amenaces i Mitigacions
+15.1 Amenaces
+manipulació de fitxers
+
+modificació de models IA
+
+corrupció de BD
+
+permisos incorrectes
+
+execució no autoritzada
+
+15.2 Mitigacions
+hashos criptogràfics
+
+protecció NTFS
+
+validació de rutes
+
+hardening Windows
+
+logs corporatius
+
+integració SIEM
+
+16. Procediments d’Incidències
+16.1 Detecció
+alertes SIEM
+
+anomalies en logs
+
+errors en BD
+
+16.2 Contenció
+bloqueig d’accés
+
+validació de integritat
+
+revisió de models IA
+
+16.3 Recuperació
+regeneració de BD
+
+reinstal·lació corporativa
+
+validació de hash
+
+17. Annexos de Seguretat
+Annex A — Checksums SHA256
+hash de fitxers corporatius
+
+hash de models IA
+
+Annex B — Claus del registre
+context menu
+
+integració Windows
+
+Annex C — Hardening Windows
+GPO
+
+permisos NTFS
+
+restriccions d’execució
+
+Annex D — Esquema de BD
+taules scans i duplicates

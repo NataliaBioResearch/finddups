@@ -1,0 +1,59 @@
+Add-Type -AssemblyName System.Windows.Forms
+
+# --- Diàleg ---
+$dialog = New-Object System.Windows.Forms.Form
+$dialog.Text = "Generar FindDups.msi"
+$dialog.Width = 400
+$dialog.Height = 180
+$dialog.StartPosition = "CenterScreen"
+
+$label = New-Object System.Windows.Forms.Label
+$label.Text = "Vols generar el fitxer FindDups.msi ara?"
+$label.AutoSize = $true
+$label.Top = 20
+$label.Left = 20
+$dialog.Controls.Add($label)
+
+$yesButton = New-Object System.Windows.Forms.Button
+$yesButton.Text = "Sí, generar MSI"
+$yesButton.Width = 120
+$yesButton.Top = 70
+$yesButton.Left = 40
+
+$noButton = New-Object System.Windows.Forms.Button
+$noButton.Text = "No, sortir"
+$noButton.Width = 120
+$noButton.Top = 70
+$noButton.Left = 200
+
+$dialog.Controls.Add($yesButton)
+$dialog.Controls.Add($noButton)
+
+# --- Acció si l’usuari prem Sí ---
+$yesButton.Add_Click({
+    $base = "C:\Users\PRIXTON\Desktop\Natàlia\Projectes\finddups_full_package\enterprise"
+    $wxs = Join-Path $base "FindDups.wxs"
+    $wixobj = Join-Path $base "FindDups.wixobj"
+    $msi = Join-Path $base "FindDups.msi"
+
+    [System.Windows.Forms.MessageBox]::Show("Compilant FindDups.wxs...")
+
+    candle $wxs -out $wixobj
+    light $wixobj -out $msi
+
+    if (Test-Path $msi) {
+        [System.Windows.Forms.MessageBox]::Show("MSI generat correctament a:`n$msi","Èxit")
+    } else {
+        [System.Windows.Forms.MessageBox]::Show("Error: no s'ha generat el MSI","Error")
+    }
+
+    $dialog.Close()
+})
+
+# --- Acció si l’usuari prem No ---
+$noButton.Add_Click({
+    $dialog.Close()
+})
+
+# --- Mostrar diàleg ---
+$dialog.ShowDialog()

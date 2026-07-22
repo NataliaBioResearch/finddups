@@ -1,0 +1,347 @@
+MANUAL DE QUALITAT — FINDDUPS
+Versió 1.0.0 — Plecmedia Technologies  
+Data: 22/07/2026
+
+1. Portada
+FindDups — Manual de Qualitat Corporativa  
+Polítiques, Estàndards, Procediments i Millora Contínua
+Plecmedia Technologies
+Versió 1.0.0
+Autor: Gaia / Natàlia Ràfols
+
+2. Índex
+Objectiu del Document
+
+Política de Qualitat
+
+Estàndards Aplicables
+
+Governança del Producte
+
+Cicle de Vida del Programari
+
+Control de Versions
+
+Control de Canvis
+
+Validació i Verificació
+
+Proves i Garantia de Qualitat
+
+Documentació Oficial
+
+Gestió d’Incidències
+
+Millora Contínua
+
+Compliment Normatiu
+
+Annexos de Qualitat
+
+3. Objectiu del Document
+Aquest manual defineix el marc de qualitat corporativa aplicable al producte FindDups.
+Està orientat a:
+
+equips de qualitat
+
+auditors ISO
+
+responsables de processos
+
+departaments IT
+
+equips de desenvolupament
+
+responsables de governança
+
+4. Política de Qualitat
+FindDups segueix els principis de:
+
+Fiabilitat
+
+Consistència
+
+Traçabilitat
+
+Documentació completa
+
+Millora contínua
+
+Compliment normatiu
+
+Satisfacció del client corporatiu
+
+5. Estàndards Aplicables
+FindDups s’alinea amb:
+
+ISO 9001 — Gestió de la Qualitat
+
+ISO 27001 — Seguretat de la Informació
+
+ISO 25010 — Qualitat del Programari
+
+ENS — Esquema Nacional de Seguretat
+
+GDPR — Protecció de dades
+
+Polítiques internes corporatives
+
+6. Governança del Producte
+6.1 Responsabilitats
+Plecmedia Technologies: desenvolupament i QA
+
+Client corporatiu: desplegament i ús
+
+Administradors IT: configuració i integració
+
+Auditors: verificació de compliment
+
+6.2 Documentació
+Inclou:
+
+Manual Tècnic
+
+Documentació Comercial
+
+Whitepaper IA
+
+Guia IT
+
+Manual de Seguretat
+
+Manual de Compliance
+
+Manual de Qualitat
+
+7. Cicle de Vida del Programari
+FindDups segueix un cicle de vida estructurat:
+
+Anàlisi de requisits
+
+Disseny funcional i tècnic
+
+Desenvolupament
+
+Proves unitàries
+
+Proves d’integració
+
+Proves de regressió
+
+Validació corporativa
+
+Publicació
+
+Manteniment
+
+Millora contínua
+
+8. Control de Versions
+8.1 version.txt
+Inclou:
+
+versió actual
+
+data
+
+hash de verificació
+
+8.2 SemVer
+FindDups utilitza:
+
+Major — canvis estructurals
+
+Minor — noves funcionalitats
+
+Patch — correccions
+
+9. Control de Canvis
+9.1 ChangeLog
+Cada versió inclou:
+
+funcionalitats noves
+
+correccions
+
+millores
+
+canvis en models IA
+
+canvis en configuració
+
+9.2 Procediment de canvi
+Sol·licitud
+
+Avaluació
+
+Aprovació
+
+Implementació
+
+Validació
+
+Documentació
+
+10. Validació i Verificació
+10.1 Verificació
+Comprova que el producte:
+
+compleix requisits tècnics
+
+funciona segons especificacions
+
+manté integritat
+
+10.2 Validació
+Comprova que el producte:
+
+compleix necessitats del client
+
+és usable
+
+és segur
+
+és fiable
+
+11. Proves i Garantia de Qualitat
+11.1 Proves unitàries
+funcions internes
+
+motor de hash
+
+motor IA
+
+11.2 Proves d’integració
+context menu
+
+updater
+
+BD SQLite
+
+models IA
+
+11.3 Proves de regressió
+cada versió
+
+cada actualització
+
+11.4 Proves de rendiment
+escaneig massiu
+
+càrrega IA
+
+BD
+
+11.5 Proves de seguretat
+integritat
+
+permisos
+
+protecció de dades
+
+12. Documentació Oficial
+Inclou:
+
+manuals corporatius
+
+annexos tècnics
+
+scripts oficials
+
+whitepapers
+
+fitxers de configuració
+
+13. Gestió d’Incidències
+13.1 Tipus d’incidències
+tècniques
+
+funcionals
+
+de seguretat
+
+de rendiment
+
+de compatibilitat
+
+13.2 Procediment
+Detecció
+
+Registre
+
+Anàlisi
+
+Resolució
+
+Validació
+
+Documentació
+
+14. Millora Contínua
+FindDups aplica:
+
+revisió anual de models IA
+
+revisió de configuració
+
+revisió de scripts
+
+revisió de seguretat
+
+revisió de rendiment
+
+revisió de documentació
+
+15. Compliment Normatiu
+FindDups compleix:
+
+ISO 9001
+
+ISO 27001
+
+ENS
+
+GDPR
+
+Polítiques corporatives
+
+Controls aplicats:
+
+integritat
+
+traçabilitat
+
+auditabilitat
+
+seguretat
+
+documentació
+
+16. Annexos de Qualitat
+Annex A — Matriu de Requisits
+requisits funcionals
+
+requisits tècnics
+
+requisits de seguretat
+
+Annex B — Matriu de Proves
+proves unitàries
+
+proves d’integració
+
+proves de regressió
+
+Annex C — Matriu de Riscos
+riscos tècnics
+
+riscos operatius
+
+riscos de seguretat
+
+Annex D — Matriu de Compliment
+ISO
+
+ENS
+
+GDPR
